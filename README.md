@@ -2,7 +2,7 @@
 
 Enhances `Nav.onLocation(fn)` to have an ordered pipeline execute when the location changes.
 
-See [cosmos:chain](https://github.com/elidoran/cosmos-chain) for more details about the pipeline (a special chain).
+See [cosmos:chain](https://github.com/elidoran/cosmos-chain) for more details about using the pipeline (a special chain).
 
 This packages depends on `cosmos:navigator-location` so when you add this package it will add `cosmos:navigator-location` automatically.
 
@@ -18,7 +18,7 @@ To use the pipeline you must set an `options` object on your action with an `id`
 
 ```coffeescript
 # create your function
-fn1 = (context, next) ->
+fn1 = (next, context) ->
   console.log 'location: ',context.location
   # this.location is the same value
   # Nav.location is the same value
